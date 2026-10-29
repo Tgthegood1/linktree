@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tgthegood – Mis redes</title>
+<meta name="description" content="Audiolibros y más. Encuéntrame en YouTube, TikTok, Instagram, Facebook y Patreon.">
+<meta property="og:title" content="Tgthegood – Mis redes">
+<meta property="og:description" content="Audiolibros y más. Encuéntrame en YouTube, TikTok, Instagram, Facebook y Patreon.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#3b2bd9">
+  <!-- Icono de la pestaña del navegador (favicon): unos audífonos dibujados en SVG, dentro del propio archivo -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='black'/%3E%3Cpath d='M16 38V32a16 16 0 0 1 32 0V38' fill='none' stroke='white' stroke-width='4.5' stroke-linecap='round'/%3E%3Crect x='10' y='35' width='11' height='18' rx='4.5' fill='white'/%3E%3Crect x='43' y='35' width='11' height='18' rx='4.5' fill='white'/%3E%3C/svg%3E">
+<style>
+  :root {
+    --bg: #eceef6;
+    --card: #ffffff;
+    --text: #12142b;
+    --muted: #5f6480;
+    --border: #d8dbec;
+    --focus: #3b2bd9;
+    --shadow: 0 1px 2px rgba(30, 30, 80, .06), 0 8px 24px rgba(30, 30, 80, .08);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0d0f1f;
+      --card: #171a30;
+      --text: #f2f3fb;
+      --muted: #9ba0bf;
+      --border: #2a2e4d;
+      --focus: #a99cff;
+      --shadow: 0 1px 2px rgba(0, 0, 0, .3), 0 8px 24px rgba(0, 0, 0, .35);
+    }
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; }
+  body {
+    min-height: 100vh;
+    background: var(--bg);
+    color: var(--text);
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    padding: 20px 16px 40px;
+  }
+  main { width: 100%; max-width: 480px; }
+
+  /* ---------- Cabecera ---------- */
+  .profile { text-align: center; padding-top: 28px; }
+
+  h1 {
+    margin: 0 0 8px;
+    font-size: clamp(2.1rem, 9vw, 2.7rem);
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    line-height: 1.05;
+  }
+  .bio {
+    margin: 0 auto 28px;
+    max-width: 34ch;
+    color: var(--muted);
+    font-size: 1.05rem;
+    line-height: 1.45;
+  }
+
+  /* ---------- Links ---------- */
+  ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; }
+  a.link {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 14px 16px;
+    background: var(--card);
+    color: var(--text);
+    text-decoration: none;
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    box-shadow: var(--shadow);
+    transition: transform .15s ease, border-color .15s ease;
+  }
+  a.link:hover { transform: translateY(-2px); border-color: var(--c); }
+  a.link:focus-visible { outline: 3px solid var(--focus); outline-offset: 3px; }
+
+  /* Iconos dibujados dentro de la página (SVG): no dependen de links externos. */
+  .icon {
+    flex: none;
+    width: 48px; height: 48px;
+    border-radius: 13px;
+    background: var(--c);
+    display: grid;
+    place-items: center;
+  }
+  .icon svg { width: 28px; height: 28px; }
+
+  .text { flex: 1; min-width: 0; }
+  .name { display: block; font-weight: 700; font-size: 1.05rem; }
+  .handle {
+    display: block;
+    margin-top: 2px;
+    color: var(--muted);
+    font-size: .88rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .chev { flex: none; width: 20px; height: 20px; color: var(--muted); }
+
+  .youtube   { --c: #ff0000; }
+  .tiktok    { --c: #000000; }
+  .instagram { --c: #e1306c; }
+  .instagram .icon { background: linear-gradient(45deg, #f9a03f, #e1306c, #833ab4); }
+  .facebook  { --c: #1877f2; }
+  .patreon   { --c: #ff424d; }
+
+  footer {
+    margin-top: 32px;
+    text-align: center;
+    color: var(--muted);
+    font-size: .85rem;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    a.link { transition: none; }
+    a.link:hover { transform: none; }
+  }
+</style>
+</head>
+<body>
+<main>
+
+  <header>
+    <div class="profile">
+      <h1>Tgthegood</h1>
+      <p class="bio">What is it??!!</p>
+    </div>
+  </header>
+
+  <!-- Para añadir otra red, copia un bloque <li>...</li> completo. -->
+  <ul>
+
+    <li><a class="link youtube" href="https://youtube.com/@audiolibros851" target="_blank" rel="noopener noreferrer">
+      <span class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="5.5" width="19" height="13" rx="4" fill="#fff"/><path d="M10 9l5.5 3-5.5 3z" fill="#ff0000"/></svg></span>
+      <span class="text"><span class="name">YouTube</span><span class="handle">@audiolibros851</span></span>
+      <svg class="chev" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5l7 7-7 7"/></svg>
+    </a></li>
+
+    <li><a class="link tiktok" href="https://www.tiktok.com/@tgthegood" target="_blank" rel="noopener noreferrer">
+      <span class="icon"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4v10.5a3.5 3.5 0 1 1-3.5-3.5"/><path d="M14 4c.3 2.4 1.9 4 4.5 4.2"/></svg></span>
+      <span class="text"><span class="name">TikTok</span><span class="handle">@tgthegood</span></span>
+      <svg class="chev" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5l7 7-7 7"/></svg>
+    </a></li>
+
+    <li><a class="link instagram" href="https://www.instagram.com/tgthegood_/" target="_blank" rel="noopener noreferrer">
+      <span class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="5" fill="none" stroke="#fff" stroke-width="2"/><circle cx="12" cy="12" r="4" fill="none" stroke="#fff" stroke-width="2"/><circle cx="17.2" cy="6.8" r="1.2" fill="#fff"/></svg></span>
+      <span class="text"><span class="name">Instagram</span><span class="handle">@tgthegood_</span></span>
+      <svg class="chev" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5l7 7-7 7"/></svg>
+    </a></li>
+
+    <li><a class="link facebook" href="https://www.facebook.com/people/Tgthegood/61594548371700/" target="_blank" rel="noopener noreferrer">
+      <span class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.5 21v-7.5h2.6l.4-3h-3V8.6c0-.9.3-1.5 1.6-1.5h1.5V4.4c-.3 0-1.2-.1-2.2-.1-2.3 0-3.8 1.4-3.8 3.9v2.3H8v3h2.6V21z" fill="#fff"/></svg></span>
+      <span class="text"><span class="name">Facebook</span><span class="handle">Tgthegood</span></span>
+      <svg class="chev" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5l7 7-7 7"/></svg>
+    </a></li>
+
+    <li><a class="link patreon" href="https://patreon.com/Tgthegood52" target="_blank" rel="noopener noreferrer">
+      <span class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="14.5" cy="10" r="5.5" fill="#fff"/><rect x="4" y="4.5" width="3.2" height="15" fill="#fff"/></svg></span>
+      <span class="text"><span class="name">Patreon</span><span class="handle">Apoya mi contenido</span></span>
+      <svg class="chev" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5l7 7-7 7"/></svg>
+    </a></li>
+
+  </ul>
+
+  <footer>© <span id="year">2026</span> Tgthegood</footer>
+
+</main>
+
+<script>
+  (function () {
+    var year = document.getElementById('year');
+    if (year) year.textContent = new Date().getFullYear();
+  })();
+</script>
+</body>
+</html>
